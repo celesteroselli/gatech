@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block page_content %}
+
+<div class="conatiner">
+    <div class="section p-3 min-vh-100 d-flex">
+        <div class="mx-auto px-5">
+            <h2>Enter the competition!</h2>
+            <form method="post">
+                {% csrf_token %}
+            <div class="row mt-4"><label class="m-0">Name</label></div>
+            <div class="row mb-4 mt-1">{{ form.name }}</div>
+            <button class="row w-50 mx-auto" type="submit"><p class="text-center m-0 p-1">Save</p></button>
+            </form>
+        </div>
+    </div>
+{% endblock %}

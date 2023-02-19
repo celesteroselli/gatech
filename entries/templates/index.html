@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block page_content %}
+<div class="conatiner">
+    <div class="section p-3 bg-dark min-vh-100 d-flex">
+        <div class="m-auto text-center text-light px-5">
+            <h1 class="">Georgia Tech Contest Title</h1>
+            <p class="pt-4">laura ipsom dolor laura ipsom dolor laura ipsom dolor laura ipsom dolor laura ipsom dolor
+                laura ipsom dolor laura ipsom dolor laura ipsom dolor laura ipsom dolor laura ipsom dolor
+            </p>
+        </div>
+    </div>
+
+    <div class="section p-3 bg-light min-vh-100 d-flex">
+        <div class="m-auto text-center text-dark px-5">
+            <h1 class="">Submit your entries!</h1>
+            <p class="pt-4">laura ipsom dolor laura ipsom dolor laura ipsom dolor laura ipsom dolor laura ipsom dolor
+                laura ipsom dolor laura ipsom dolor laura ipsom dolor laura ipsom dolor laura ipsom dolor
+            </p>
+            <a class="btn btn-primary" href="{% url 'create_entry' %}" role="button">Submit</a>
+        </div>
+    </div>
+</div>
+{% endblock %}
