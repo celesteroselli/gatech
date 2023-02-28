@@ -27,7 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['web-production-2fafb.up.railway.app', '127.0.0.1', 'stoomdesign.com', 'www.stoomdesign.com']
 
-CSRF_TRUSTED_ORIGINS = ['https://web-production-2fafb.up.railway.app']
+CSRF_TRUSTED_ORIGINS = ['https://web-production-2fafb.up.railway.app', 'https://stoomdesign.com', 'https://www.stoomdesign.com']
 
 # Application definition
 
