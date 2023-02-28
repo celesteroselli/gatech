@@ -1,6 +1,23 @@
 {% extends "base.html" %}
 
 {% block page_content %}
+
+<div class="p-1">
+    <h4 class="float-end pt-1 px-3">Stoom Design</h4>
+<ul class="nav justify-content-start" id="home">
+    <li class="nav-item">
+      <a class="nav-link" aria-current="page" href="{% url 'index' %}">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#section-2">Submit</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#section-3">Contact</a>
+    </li>
+  </ul>
+</div>
+
+
 <div class="conatiner">
     <div class="section p-3 bg-dark min-vh-100 d-flex">
         <div class="m-auto text-center text-light px-5">
@@ -11,13 +28,22 @@
         </div>
     </div>
 
-    <div class="section p-3 bg-light min-vh-100 d-flex">
+    <div id="section-2" class="section p-3 bg-light min-vh-100 d-flex">
         <div class="m-auto text-center text-dark px-5">
             <h1 class="">Submit your entries!</h1>
             <p class="pt-4">laura ipsom dolor laura ipsom dolor laura ipsom dolor laura ipsom dolor laura ipsom dolor
                 laura ipsom dolor laura ipsom dolor laura ipsom dolor laura ipsom dolor laura ipsom dolor
             </p>
             <a class="btn btn-primary" href="{% url 'create_entry' %}" role="button">Submit</a>
+        </div>
+    </div>
+
+    <div id="section-3" class="section p-3 bg-dark min-vh-100 d-flex">
+        <div class="m-auto text-center text-light px-5">
+            <h1 class="">Contact Stoom Designs</h1>
+            <p class="pt-4">laura ipsom dolor laura ipsom dolor laura ipsom dolor laura ipsom dolor laura ipsom dolor
+                laura ipsom dolor laura ipsom dolor laura ipsom dolor laura ipsom dolor laura ipsom dolor
+            </p>
         </div>
     </div>
 </div>

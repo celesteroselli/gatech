@@ -16,7 +16,6 @@ import os
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
@@ -26,7 +25,7 @@ SECRET_KEY = 'django-insecure-xg@d)2=(xg#9rdmo+qxkx4!od2+*yf$^9p1cif_4%vzr0&*cwn
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['web-production-2fafb.up.railway.app', '127.0.0.1']
+ALLOWED_HOSTS = ['web-production-2fafb.up.railway.app', '127.0.0.1', 'stoomdesign.com', 'www.stoomdesign.com']
 
 CSRF_TRUSTED_ORIGINS = ['https://web-production-2fafb.up.railway.app']
 
