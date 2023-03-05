@@ -1,4 +1,4 @@
 .imgbg {
-    background-image: url('render.jpeg');
+    background-image: url('s3://gatech2027/static/render.jpeg');
     background-size: cover; 
 }
