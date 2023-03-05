@@ -15,7 +15,7 @@ class Entry(models.Model):
     school = models.CharField(max_length=50, null=True)
     grade = models.CharField(max_length=2, choices=GRADES, null=True) 
     email = models.EmailField(max_length=100, null=True)
-    file = models.FileField(upload_to='uploads/', null=True)
+    file = models.FileField(null=True, upload_to='static')
 
     def get_absolute_url(self):
         return reverse('index')

@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'entries',
+    'storages',
 ]
 
 MIDDLEWARE = [
@@ -124,12 +125,25 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
-STATIC_URL = '/static/'
+STATIC_URL = 'static/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
-STATIC_ROOT =os.path.join(BASE_DIR, 'staticfiles')
+AWS_ACCESS_KEY_ID = 'AKIA2VFHQ6DJCCR364PT'
+
+AWS_SECRET_ACCESS_KEY = '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'
+
+AWS_STORAGE_BUCKET_NAME = 'gatech2027'
+
+AWS_S3_FILE_OVERWRITE = False  
+
+AWS_DEFAULT_ACL = None  
+
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'  
+
+AWS_S3_REGION_NAME = "us-east-2"  
+
+AWS_S3_ADDRESSING_STYLE = "virtual"
