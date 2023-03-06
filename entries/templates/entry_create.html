@@ -2,24 +2,47 @@
 
 {% block page_content %}
 
-<div class="conatiner">
-    <div class="section p-3 min-vh-100 d-flex">
-        <div class="mx-auto px-5">
-            <h2>Enter the competition!</h2>
+
+<div class="p-1 bg-light text-dark">
+    <h4 class="float-end pt-1 px-3">Stoom Design</h4>
+<ul class="nav justify-content-start" id="home">
+    <li class="nav-item">
+      <a class="nav-link text-dark" aria-current="page" href="{% url 'index' %}">Home</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link text-dark" aria-current="page" href="{% url 'index' %}">About</a>
+      </li>
+    <li class="nav-item">
+      <a class="nav-link text-dark" href="{% url 'index' %}">Submit</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link text-dark" href="{% url 'index' %}">Contact</a>
+    </li>
+  </ul>
+</div>
+
+<div class="imgbg min-vh-100">
+
+<div class="mx-auto p-5">
+    <div class="p-3 mx-auto bg-light rounded shadow" style="width: 600px;">
+      <h2 class="text-center pt-2">Enter the competition!</h2>
+        <div class="d-flex align-items-center justify-content-center">
             <form method="post" enctype="multipart/form-data">
                 {% csrf_token %}
-            <div class="row mt-4"><label class="m-0">Name</label></div>
+            <div class="row mt-4"><label class="m-0">Name:</label></div>
             <div class="row mb-4 mt-1">{{ form.name }}</div>
-            <div class="row mt-4"><label class="m-0">School Name</label></div>
+            <div class="row mt-4"><label class="m-0">School Name:</label></div>
             <div class="row mb-4 mt-1">{{ form.school }}</div>
-            <div class="row mt-4"><label class="m-0">Grade</label></div>
+            <div class="row mt-4"><label class="m-0">Grade:</label></div>
             <div class="row mb-4 mt-1">{{ form.grade }}</div>
-            <div class="row mt-4"><label class="m-0">Email</label></div>
+            <div class="row mt-4"><label class="m-0">Email:</label></div>
             <div class="row mb-4 mt-1">{{ form.email }}</div>
-            <div class="row mt-4"><label class="m-0">Project File</label></div>
+            <div class="row mt-4"><label class="m-0">Project File:</label></div>
             <div class="row mb-4 mt-1">{{ form.file }}</div>
-            <button class="row w-50 mx-auto" type="submit"><p class="text-center m-0 p-1">Save</p></button>
+            <div class="d-flex justify-content-center pb-3"><button class="w-50 btn btn-success" type="submit"><p class="text-center m-0 p-1">Save</p></button></div>
             </form>
         </div>
     </div>
+
+</div>
 {% endblock %}

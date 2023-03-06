@@ -4,48 +4,108 @@
 
 {% load static %}
 
-<div class="p-1">
+<div class="p-1 bg-white text-dark" id="section1">
     <h4 class="float-end pt-1 px-3">Stoom Design</h4>
 <ul class="nav justify-content-start" id="home">
     <li class="nav-item">
-      <a class="nav-link" aria-current="page" href="{% url 'index' %}">Home</a>
+      <a class="nav-link text-dark" aria-current="page" href="#section1">Home</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#section-2">Submit</a>
+        <a class="nav-link text-dark" aria-current="page" href="#section2">About</a>
+      </li>
+    <li class="nav-item">
+      <a class="nav-link text-dark" href="#section3">Submit</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#section-3">Contact</a>
+      <a class="nav-link text-dark" href="#section4">Contact</a>
     </li>
   </ul>
 </div>
 
-<div class="conatiner">
+<div>
     <div class="section p-3 min-vh-100 d-flex imgbg">
         <div class="m-auto text-center text-light px-5">
-            <h1 class="">Georgia Tech Contest Title</h1>
-            <p class="pt-4">laura ipsom dolor laura ipsom dolor laura ipsom dolor laura ipsom dolor laura ipsom dolor
-                laura ipsom dolor laura ipsom dolor laura ipsom dolor laura ipsom dolor laura ipsom dolor
-            </p>
+            <h1 class="txt_shadow">Stoomdesign Student Apartment Project</h1>
+            <h3 class="pt-4 txt_shadow">Submit you designs for study rooms for the new Georgia Tech housing building!
+            </h3>
         </div>
     </div>
 
-    <div id="section-2" class="section p-3 bg-dark min-vh-100 d-flex">
-        <div class="m-auto text-center text-light px-5">
-            <h1 class="">Submit your entries!</h1>
-            <p class="pt-4">laura ipsom dolor laura ipsom dolor laura ipsom dolor laura ipsom dolor laura ipsom dolor
-                laura ipsom dolor laura ipsom dolor laura ipsom dolor laura ipsom dolor laura ipsom dolor
+    <div id="section2" class="section p-3 bg-white min-vh-100 d-flex">
+        <div class="m-auto text-center text-dark px-5 row">
+            <div class="col-lg-6">
+
+            <div class="">
+                <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <img src="{% static 'slide1.png' %}" class="d-block w-100" alt="...">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="{% static 'slide2.png' %}" class="d-block w-100" alt="...">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="{% static 'slide3.png' %}" class="d-block w-100" alt="...">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="{% static 'slide4.png' %}" class="d-block w-100" alt="...">
+                      </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                        <h2><i class="bi bi-caret-left-fill text-dark"></i></h2>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                        <h2><i class="bi bi-caret-right-fill text-dark"></i></h2>
+                    </button>
+                  </div>
+                
+            </div>
+        </div>
+            <div class="col-lg-6 d-flex align-items-center">
+                <div>
+            <h1 class="">About the Contest</h1>
+            <p class="pt-4">This contest is a competition for high school students around Atlanta to design study rooms for a new
+                building being built by Stoomdesigns. The winning plans will be implemented in the new building!
+            </p>
+        </div>
+    </div>
+        </div>
+    </div>
+
+    <div id="section3" class="section p-3 bg-dark min-vh-100 d-flex">
+        <div class="m-auto text-center text-light px-5 w-75">
+            <h1>Submit your Entry!</h1>
+            <p class="pt-4">To submit your entry to the competition, please include your: </p>
+            <div class="d-flex justify-content-center">
+            <ul class="text-start">
+                <li>Name (or names of teammates if applicable)</li>
+                <li>School name</li>
+                <li>Email</li>
+                <li>Project File</li>
+            </ul>
+        </div>
+            <p>If you have more than one file, please attatch a zip file with all of them included.
             </p>
             <a class="btn btn-primary" href="{% url 'create_entry' %}" role="button">Submit</a>
         </div>
     </div>
+</div>
 
-    <div id="section-3" class="section p-3 bg-light min-vh-100 d-flex">
-        <div class="m-auto text-center text-dark px-5">
-            <h1 class="">Contact Stoom Designs</h1>
-            <p class="pt-4">laura ipsom dolor laura ipsom dolor laura ipsom dolor laura ipsom dolor laura ipsom dolor
-                laura ipsom dolor laura ipsom dolor laura ipsom dolor laura ipsom dolor laura ipsom dolor
-            </p>
-        </div>
+<div id="section4" class="section p-3 bg-white min-vh-100 d-flex">
+    <div class="m-auto text-center text-dark px-5 row">
+        <div class="col-lg-6 d-flex align-items-center w-100">
+            <div>
+        <h1 class="pb-4">Contact Stoom Design</h1>
+        <h4><i class="bi bi-envelope-fill mx-3"></i>stoomdesign@gmail.com</h4>
+        <h4><i class="bi bi-telephone-fill mx-3"></i></i>(777)-777-7777</h4>
     </div>
 </div>
+    </div>
+    <div class="col-lg-6 d-flex align-items-center">
+        <img src="{% static 'img2.png' %}" width="100%">
+    </div>
+</div>
+<footer class="text-center p-3 bg-footer text-dark">
+    <p class="m-0">Stoomdesign Copyright</p>
+</footer>
 {% endblock %}

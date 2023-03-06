@@ -1,4 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600&display=swap');
+
 .imgbg {
     background-image: url('https://gatech2027.s3.us-east-2.amazonaws.com/static/render.jpeg');
-    background-size: cover; 
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+body, html {
+    height: 100%;
+  }
+
+.bg-form {
+    background-image: url('https://gatech2027.s3.us-east-2.amazonaws.com/static/render.jpeg');
+    background-size: cover;
+}
+
+.bg-footer {
+    background-color: rgb(199, 199, 199);
+}
+
+.txt_shadow {
+    text-shadow: 2px 4px 5px rgba(0, 0, 0, 0.6);
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: 600;
+}
+
+body {
+    font-family: 'Titillium Web', sans-serif;
+}
+
+h1, h2, h3, h4 {
+    font-weight: 600;
+}
+
+p, a {
+    font-weight: 400;
+}
+
+a:hover {
+    font-weight: 600;
 }

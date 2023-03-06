@@ -42,6 +42,7 @@ class EntryForm(forms.Form):
         max_length=100,
         widget=forms.FileInput(attrs={
             "class": "form-control",
-            "placeholder": "Your File"
+            "placeholder": "Your File",
+            "type": "file",
         })
     )
