@@ -12,6 +12,10 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 from pathlib import Path
 import os
+import environ
+
+env = environ.Env()
+environ.Env.read_env()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -132,11 +136,11 @@ STATIC_URL = 'https://gatech2027.s3.us-east-2.amazonaws.com/static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-AWS_ACCESS_KEY_ID = 'AKIA2VFHQ6DJCCR364PT'
+AWS_ACCESS_KEY_ID = env('AWS_ACCESS_KEY_ID')
 
-AWS_SECRET_ACCESS_KEY = '2VRPWJmUUSY9EitWvpdmDgf1aK4SK5KR4fkxx0PH'
+AWS_SECRET_ACCESS_KEY = env('AWS_SECRET_ACCESS_KEY')
 
-AWS_STORAGE_BUCKET_NAME = 'gatech2027'
+AWS_STORAGE_BUCKET_NAME = env('AWS_STORAGE_BUCKET_NAME')
 
 AWS_S3_FILE_OVERWRITE = False  
 
