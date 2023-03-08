@@ -45,3 +45,7 @@ p, a {
 a:hover {
     font-weight: 600;
 }
+
+.responsive {
+    background-color: aqua;
+}
