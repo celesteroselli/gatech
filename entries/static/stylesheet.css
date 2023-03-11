@@ -50,6 +50,13 @@ a:hover {
     font-weight: 600;
 }
 
-.responsive {
-    background-color: aqua;
+.repo {
+    width: 600px;
 }
+   
+
+@media (max-width: 750px) {
+   .repo {
+    width: 400px;
+   }
+  }
