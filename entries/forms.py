@@ -11,6 +11,7 @@ class EntryForm(forms.Form):
 
     name = forms.CharField(
         max_length=60,
+        required=True,
         widget=forms.TextInput(attrs={
             "class": "form-control",
             "placeholder": "Your Name"
@@ -18,6 +19,7 @@ class EntryForm(forms.Form):
     )
     school = forms.CharField(
         max_length=100,
+        required=True,
         widget=forms.TextInput(attrs={
             "class": "form-control",
             "placeholder": "Your School"
@@ -26,6 +28,7 @@ class EntryForm(forms.Form):
     grade = forms.ChoiceField(
         choices=GRADES,
         max_length=100,
+        required=True,
         widget=forms.ChoiceWidget(attrs={
             "class": "form-control",
             "placeholder": "Your Grade"
@@ -33,6 +36,7 @@ class EntryForm(forms.Form):
     )
     email = forms.CharField(
         max_length=100,
+        required=True,
         widget=forms.TextInput(attrs={
             "class": "form-control",
             "placeholder": "Your School"
@@ -40,6 +44,7 @@ class EntryForm(forms.Form):
     )
     file = forms.FileField(
         max_length=100,
+        required=True,
         widget=forms.FileInput(attrs={
             "class": "form-control",
             "placeholder": "Your File",

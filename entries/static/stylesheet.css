@@ -46,6 +46,10 @@ a:hover {
     font-weight: 600;
 }
 
+.btn:hover {
+    font-weight: 600;
+}
+
 .responsive {
     background-color: aqua;
 }

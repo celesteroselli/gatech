@@ -22,16 +22,11 @@
 </div>
 
 <div class="imgbg min-vh-100 pt-5">
-  <div class="mx-auto p-3 bg-light shadow rounded" style="width: 600px;">
-    <div class="mx-auto" style="width: 80%;">
-    <h2 class="text-center py-2">Enter the Competition</h2>
+  <div class="mx-auto p-3 bg-light shadow rounded card" style="width: 600px;">
+    <h2 class="text-center pt-2">Thanks for your submission!</h2>
     <hr>
-    <form method="post" enctype="multipart/form-data">
-      {% csrf_token %}
-      {% bootstrap_form form %}
-  <div class="d-flex justify-content-center pb-3"><button class="w-50 btn btn-primary" type="submit"><p class="text-center m-0 p-1">Submit</p></button></div>
-  </form>
-  </div>
+        <p class="px-4 text-center">For any questions regarding your entry in the competition, contact stoomdesign@gmail.com.</p>
+        <div class="d-flex justify-content-center py-3"><a href="{% url 'index' %}" class="btn btn-primary w-50">Return to Home</a></div>
   </div>
 </div>
 {% endblock %}
